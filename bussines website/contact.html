@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Haven | Contact</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">☕ Brew Haven</div>
+
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./menu.html">Menu</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html" class="active">Contact</a>
+    </nav>
+</header>
+
+<section class="page-hero">
+    <div>
+        <span>GET IN TOUCH</span>
+        <h1>Contact Us</h1>
+        <p>We would love to hear from you.</p>
+    </div>
+</section>
+
+<section class="contact-section">
+
+    <div class="contact-info">
+
+        <span>CONTACT INFORMATION</span>
+
+        <h2>Let's Talk ☕</h2>
+
+        <div class="contact-item">
+            <div>📍</div>
+            <div>
+                <h3>Location</h3>
+                <p>Iloilo City, Philippines</p>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <div>📞</div>
+            <div>
+                <h3>Phone</h3>
+                <p>0912 345 6789</p>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <div>✉️</div>
+            <div>
+                <h3>Email</h3>
+                <p>brewhaven@example.com</p>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <div>🕐</div>
+            <div>
+                <h3>Opening Hours</h3>
+                <p>Monday - Sunday</p>
+                <p>8:00 AM - 9:00 PM</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="contact-form">
+
+        <h2>Send Us a Message</h2>
+
+        <form onsubmit="sendMessage(event)">
+
+            <label>Your Name</label>
+            <input
+                type="text"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label>Email</label>
+            <input
+                type="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label>Subject</label>
+            <input
+                type="text"
+                placeholder="Enter subject"
+                required
+            >
+
+            <label>Message</label>
+            <textarea
+                placeholder="Write your message..."
+                required
+            ></textarea>
+
+            <button type="submit" class="btn">
+                Send Message ✉️
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="section-title">
+        <span>FAQ</span>
+        <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq-grid">
+
+        <div class="faq-card">
+            <h3>Do you accept GCash?</h3>
+            <p>Yes. GCash is available as a payment option during checkout.</p>
+        </div>
+
+        <div class="faq-card">
+            <h3>Do you offer takeout?</h3>
+            <p>Yes. You can select Takeout when placing your order.</p>
+        </div>
+
+        <div class="faq-card">
+            <h3>Can I customize my order?</h3>
+            <p>Yes. You can add special requests during checkout.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <h3>☕ Brew Haven</h3>
+    <p>Good coffee. Good food. Good moments.</p>
+    <p>© 2026 Brew Haven. All Rights Reserved.</p>
+</footer>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
