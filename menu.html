@@ -1,440 +1,871 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brew Haven | Menu</title>
-    <link rel="stylesheet" href="./style.css">
+
+    <title>Rene's Brew | Menu</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
-    <div class="logo">☕ Brew Haven</div>
+
+    <div class="logo">
+        ☕ Rene's Brew
+    </div>
 
     <nav>
-        <a href="./index.html">Home</a>
-        <a href="./menu.html" class="active">Menu</a>
-        <a href="./about.html">About</a>
-        <a href="./contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
     </nav>
+
 </header>
 
-<section class="page-hero">
-    <div>
-        <span>BREW HAVEN</span>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
         <h1>Our Menu</h1>
-        <p>Fresh drinks and delicious food made for you.</p>
-    </div>
-</section>
 
-<section class="menu-section">
-
-    <div class="section-title">
-        <span>EXPLORE</span>
-        <h2>Choose Your Favorite</h2>
-    </div>
-
-    <!-- SEARCH -->
-    <div class="search-box">
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="🔍 Search coffee, food, desserts..."
-            onkeyup="searchProducts()"
-        >
-    </div>
-
-    <!-- CATEGORIES -->
-    <div class="categories">
-        <button class="category-btn active" onclick="filterCategory('all', this)">All</button>
-        <button class="category-btn" onclick="filterCategory('coffee', this)">☕ Coffee</button>
-        <button class="category-btn" onclick="filterCategory('noncoffee', this)">🥤 Non-Coffee</button>
-        <button class="category-btn" onclick="filterCategory('dessert', this)">🍰 Desserts</button>
-        <button class="category-btn" onclick="filterCategory('food', this)">🥪 Food</button>
-    </div>
-
-    <!-- BEST SELLERS -->
-    <div class="menu-heading">
-        <span>🔥 POPULAR</span>
-        <h2>Best Sellers</h2>
-    </div>
-
-    <div class="product-grid">
-
-        <div class="product-card best"
-             data-name="Iced Coffee"
-             data-category="coffee">
-
-            <div class="best-badge">🔥 BEST SELLER</div>
-
-            <div class="product-image">
-                <img src="./images/iced-coffee.jpg" alt="Iced Coffee">
-            </div>
-
-            <div class="product-info">
-                <h3>Iced Coffee</h3>
-                <p>Refreshing chilled coffee with a smooth and creamy taste.</p>
-                <strong>₱100</strong>
-
-                <button
-                    class="add-btn"
-                    onclick="addToCart('Iced Coffee', 100, './images/iced-coffee.jpg')">
-                    + Add to Cart
-                </button>
-            </div>
-        </div>
-
-        <div class="product-card best"
-             data-name="Cappuccino"
-             data-category="coffee">
-
-            <div class="best-badge">🔥 BEST SELLER</div>
-
-            <div class="product-image">
-                <img src="./images/cappuccino.jpg" alt="Cappuccino">
-            </div>
-
-            <div class="product-info">
-                <h3>Cappuccino</h3>
-                <p>Rich espresso combined with steamed milk and soft foam.</p>
-                <strong>₱120</strong>
-
-                <button
-                    class="add-btn"
-                    onclick="addToCart('Cappuccino', 120, './images/cappuccino.jpg')">
-                    + Add to Cart
-                </button>
-            </div>
-        </div>
-
-        <div class="product-card best"
-             data-name="Chocolate Cake"
-             data-category="dessert">
-
-            <div class="best-badge">🔥 BEST SELLER</div>
-
-            <div class="product-image">
-                <img src="./images/chocolate-cake.jpg" alt="Chocolate Cake">
-            </div>
-
-            <div class="product-info">
-                <h3>Chocolate Cake</h3>
-                <p>Moist and rich chocolate cake perfect with coffee.</p>
-                <strong>₱150</strong>
-
-                <button
-                    class="add-btn"
-                    onclick="addToCart('Chocolate Cake', 150, './images/chocolate-cake.jpg')">
-                    + Add to Cart
-                </button>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- DRINKS -->
-    <div class="menu-heading">
-        <span>☕ DRINKS</span>
-        <h2>Our Drinks</h2>
-    </div>
-
-    <div class="product-grid">
-
-        <div class="product-card"
-             data-name="Cappuccino"
-             data-category="coffee">
-
-            <div class="product-image">
-                <img src="./images/cappuccino.jpg" alt="Cappuccino">
-            </div>
-
-            <div class="product-info">
-                <h3>Cappuccino</h3>
-                <p>Classic espresso with steamed milk and foam.</p>
-                <strong>₱120</strong>
-
-                <button class="add-btn"
-                    onclick="addToCart('Cappuccino', 120, './images/cappuccino.jpg')">
-                    + Add to Cart
-                </button>
-            </div>
-        </div>
-
-        <div class="product-card"
-             data-name="Iced Coffee"
-             data-category="coffee">
-
-            <div class="product-image">
-                <img src="./images/iced-coffee.jpg" alt="Iced Coffee">
-            </div>
-
-            <div class="product-info">
-                <h3>Iced Coffee</h3>
-                <p>Cold and refreshing coffee for any time of the day.</p>
-                <strong>₱100</strong>
-
-                <button class="add-btn"
-                    onclick="addToCart('Iced Coffee', 100, './images/iced-coffee.jpg')">
-                    + Add to Cart
-                </button>
-            </div>
-        </div>
-
-        <div class="product-card"
-             data-name="Mocha"
-             data-category="coffee">
-
-            <div class="product-image">
-                <img src="./images/mocha.jpg" alt="Mocha">
-            </div>
-
-            <div class="product-info">
-                <h3>Mocha</h3>
-                <p>A delicious blend of espresso and chocolate.</p>
-                <strong>₱130</strong>
-
-                <button class="add-btn"
-                    onclick="addToCart('Mocha', 130, './images/mocha.jpg')">
-                    + Add to Cart
-                </button>
-            </div>
-        </div>
-
-        <div class="product-card"
-             data-name="Matcha Latte"
-             data-category="noncoffee">
-
-            <div class="product-image">
-                <img src="./images/matcha.jpg" alt="Matcha Latte">
-            </div>
-
-            <div class="product-info">
-                <h3>Matcha Latte</h3>
-                <p>Smooth creamy matcha with a refreshing taste.</p>
-                <strong>₱140</strong>
-
-                <button class="add-btn"
-                    onclick="addToCart('Matcha Latte', 140, './images/matcha.jpg')">
-                    + Add to Cart
-                </button>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- FOODS -->
-    <div class="menu-heading">
-        <span>🥐 FOODS</span>
-        <h2>Food & Desserts</h2>
-    </div>
-
-    <div class="product-grid">
-
-        <div class="product-card"
-             data-name="Butter Croissant"
-             data-category="food">
-
-            <div class="product-image">
-                <img src="./images/croissant.jpg" alt="Butter Croissant">
-            </div>
-
-            <div class="product-info">
-                <h3>Butter Croissant</h3>
-                <p>Flaky and buttery pastry baked fresh.</p>
-                <strong>₱90</strong>
-
-                <button class="add-btn"
-                    onclick="addToCart('Butter Croissant', 90, './images/croissant.jpg')">
-                    + Add to Cart
-                </button>
-            </div>
-        </div>
-
-        <div class="product-card"
-             data-name="Chocolate Cake"
-             data-category="dessert">
-
-            <div class="product-image">
-                <img src="./images/chocolate-cake.jpg" alt="Chocolate Cake">
-            </div>
-
-            <div class="product-info">
-                <h3>Chocolate Cake</h3>
-                <p>Rich and moist chocolate cake.</p>
-                <strong>₱150</strong>
-
-                <button class="add-btn"
-                    onclick="addToCart('Chocolate Cake', 150, './images/chocolate-cake.jpg')">
-                    + Add to Cart
-                </button>
-            </div>
-        </div>
-
-        <div class="product-card"
-             data-name="Cheesecake"
-             data-category="dessert">
-
-            <div class="product-image">
-                <img src="./images/cheesecake.jpg" alt="Cheesecake">
-            </div>
-
-            <div class="product-info">
-                <h3>Cheesecake</h3>
-                <p>Creamy cheesecake with a soft and delicious texture.</p>
-                <strong>₱140</strong>
-
-                <button class="add-btn"
-                    onclick="addToCart('Cheesecake', 140, './images/cheesecake.jpg')">
-                    + Add to Cart
-                </button>
-            </div>
-        </div>
-
-        <div class="product-card"
-             data-name="Club Sandwich"
-             data-category="food">
-
-            <div class="product-image">
-                <img src="./images/club-sandwich.jpg" alt="Club Sandwich">
-            </div>
-
-            <div class="product-info">
-                <h3>Club Sandwich</h3>
-                <p>Fresh sandwich with flavorful fillings and vegetables.</p>
-                <strong>₱160</strong>
-
-                <button class="add-btn"
-                    onclick="addToCart('Club Sandwich', 160, './images/club-sandwich.jpg')">
-                    + Add to Cart
-                </button>
-            </div>
-        </div>
+        <p>
+            Fresh coffee, delicious food, and good vibes.
+        </p>
 
     </div>
 
 </section>
 
-<!-- REVIEWS -->
-<section class="section reviews">
 
-    <div class="section-title">
-        <span>CUSTOMER REVIEWS</span>
-        <h2>What Our Customers Say</h2>
-    </div>
+<div class="container">
 
-    <div class="review-grid">
+<!-- =========================
+     SEARCH
+========================= -->
 
-        <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <p>"The coffee tastes really good and the place feels very relaxing."</p>
-            <h4>— Alex</h4>
+<div class="search-box">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Search for coffee or food..."
+        onkeyup="searchProducts()"
+    >
+
+</div>
+
+
+<!-- =========================
+     CATEGORIES
+========================= -->
+
+<div class="categories">
+
+    <button
+        class="category-btn active"
+        onclick="filterCategory('all', this)">
+        All
+    </button>
+
+    <button
+        class="category-btn"
+        onclick="filterCategory('drinks', this)">
+        ☕ Drinks
+    </button>
+
+    <button
+        class="category-btn"
+        onclick="filterCategory('coffee', this)">
+        ☕ Coffee
+    </button>
+
+    <button
+        class="category-btn"
+        onclick="filterCategory('non-coffee', this)">
+        🍵 Non-Coffee
+    </button>
+
+    <button
+        class="category-btn"
+        onclick="filterCategory('foods', this)">
+        🍔 Foods
+    </button>
+
+    <button
+        class="category-btn"
+        onclick="filterCategory('desserts', this)">
+        🍰 Desserts
+    </button>
+
+</div>
+
+
+<!-- =========================
+     BEST SELLERS
+========================= -->
+
+<div class="section-title">
+
+    <h2>⭐ Best Sellers</h2>
+
+    <p>Our customers' favorite choices</p>
+
+</div>
+
+
+<div class="products">
+
+    <!-- ICED COFFEE -->
+
+    <div
+        class="product-card"
+        data-name="iced coffee"
+        data-category="drinks coffee">
+
+        <img
+            src="images/iced-coffee.jpg"
+            alt="Iced Coffee">
+
+        <div class="product-info">
+
+            <span class="badge">
+                BEST SELLER
+            </span>
+
+            <h3>Iced Coffee</h3>
+
+            <p>
+                Cold, refreshing coffee perfect for any day.
+            </p>
+
+            <span class="price">
+                ₱100
+            </span>
+
+            <button
+                class="add-btn"
+                onclick="addOrder(
+                    'Iced Coffee',
+                    100,
+                    'images/iced-coffee.jpg'
+                )">
+
+                + Add Order
+
+            </button>
+
         </div>
 
-        <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <p>"I love the chocolate cake. Definitely one of my favorite desserts."</p>
-            <h4>— Maria</h4>
-        </div>
+    </div>
 
-        <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <p>"Fast ordering and great food. I will definitely come back."</p>
-            <h4>— John</h4>
+
+    <!-- CAPPUCCINO -->
+
+    <div
+        class="product-card"
+        data-name="cappuccino"
+        data-category="drinks coffee">
+
+        <img
+            src="images/cappuccino.jpg"
+            alt="Cappuccino">
+
+        <div class="product-info">
+
+            <span class="badge">
+                BEST SELLER
+            </span>
+
+            <h3>Cappuccino</h3>
+
+            <p>
+                Rich espresso with creamy steamed milk.
+            </p>
+
+            <span class="price">
+                ₱120
+            </span>
+
+            <button
+                class="add-btn"
+                onclick="addOrder(
+                    'Cappuccino',
+                    120,
+                    'images/cappuccino.jpg'
+                )">
+
+                + Add Order
+
+            </button>
+
         </div>
 
     </div>
 
-</section>
 
-<!-- CART BUTTON -->
-<button class="cart-floating" onclick="openCart()">
-    🛒
-    <span id="cartCount">0</span>
-</button>
+    <!-- CHOCOLATE CAKE -->
 
-<!-- CART PANEL -->
-<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+    <div
+        class="product-card"
+        data-name="chocolate cake"
+        data-category="foods desserts">
 
-<div class="cart-panel" id="cartPanel">
+        <img
+            src="images/chocolate-cake.jpg"
+            alt="Chocolate Cake">
 
-    <div class="cart-header">
-        <h2>🛒 Your Cart</h2>
-        <button onclick="closeCart()">×</button>
-    </div>
+        <div class="product-info">
 
-    <div id="cartItems" class="cart-items">
-        <p class="empty-cart">Your cart is empty.</p>
-    </div>
+            <span class="badge">
+                BEST SELLER
+            </span>
 
-    <div class="cart-footer">
+            <h3>Chocolate Cake</h3>
 
-        <div class="cart-total">
-            <span>Subtotal</span>
-            <strong>₱<span id="cartTotal">0</span></strong>
+            <p>
+                Soft and rich chocolate cake.
+            </p>
+
+            <span class="price">
+                ₱150
+            </span>
+
+            <button
+                class="add-btn"
+                onclick="addOrder(
+                    'Chocolate Cake',
+                    150,
+                    'images/chocolate-cake.jpg'
+                )">
+
+                + Add Order
+
+            </button>
+
         </div>
-
-        <button class="checkout-btn" onclick="openCheckout()">
-            Proceed to Checkout
-        </button>
 
     </div>
 
 </div>
 
-<!-- CHECKOUT MODAL -->
-<div class="modal" id="checkoutModal">
 
-    <div class="modal-content checkout-content">
+<!-- =========================
+     DRINKS
+========================= -->
 
-        <button class="modal-close" onclick="closeCheckout()">×</button>
+<div class="section-title">
 
-        <h2>🧾 Checkout</h2>
-        <p>Complete your order details.</p>
+    <h2>☕ Drinks</h2>
+
+    <p>Freshly prepared for you</p>
+
+</div>
+
+
+<div class="products">
+
+    <!-- CAPPUCCINO -->
+
+    <div
+        class="product-card"
+        data-name="cappuccino"
+        data-category="drinks coffee">
+
+        <img
+            src="images/cappuccino.jpg"
+            alt="Cappuccino">
+
+        <div class="product-info">
+
+            <h3>Cappuccino</h3>
+
+            <p>
+                Espresso with creamy steamed milk.
+            </p>
+
+            <span class="price">
+                ₱120
+            </span>
+
+            <button
+                class="add-btn"
+                onclick="addOrder(
+                    'Cappuccino',
+                    120,
+                    'images/cappuccino.jpg'
+                )">
+
+                + Add Order
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ICED COFFEE -->
+
+    <div
+        class="product-card"
+        data-name="iced coffee"
+        data-category="drinks coffee">
+
+        <img
+            src="images/iced-coffee.jpg"
+            alt="Iced Coffee">
+
+        <div class="product-info">
+
+            <h3>Iced Coffee</h3>
+
+            <p>
+                Cold and refreshing coffee.
+            </p>
+
+            <span class="price">
+                ₱100
+            </span>
+
+            <button
+                class="add-btn"
+                onclick="addOrder(
+                    'Iced Coffee',
+                    100,
+                    'images/iced-coffee.jpg'
+                )">
+
+                + Add Order
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- MOCHA -->
+
+    <div
+        class="product-card"
+        data-name="mocha"
+        data-category="drinks coffee">
+
+        <img
+            src="images/mocha.jpg"
+            alt="Mocha">
+
+        <div class="product-info">
+
+            <h3>Mocha</h3>
+
+            <p>
+                Chocolate blended with rich espresso.
+            </p>
+
+            <span class="price">
+                ₱130
+            </span>
+
+            <button
+                class="add-btn"
+                onclick="addOrder(
+                    'Mocha',
+                    130,
+                    'images/mocha.jpg'
+                )">
+
+                + Add Order
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- MATCHA -->
+
+    <div
+        class="product-card"
+        data-name="matcha latte"
+        data-category="drinks non-coffee">
+
+        <img
+            src="images/matcha.jpg"
+            alt="Matcha Latte">
+
+        <div class="product-info">
+
+            <h3>Matcha Latte</h3>
+
+            <p>
+                Creamy matcha with fresh milk.
+            </p>
+
+            <span class="price">
+                ₱140
+            </span>
+
+            <button
+                class="add-btn"
+                onclick="addOrder(
+                    'Matcha Latte',
+                    140,
+                    'images/matcha.jpg'
+                )">
+
+                + Add Order
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     FOODS & DESSERTS
+========================= -->
+
+<div class="section-title">
+
+    <h2>🍰 Foods & Desserts</h2>
+
+    <p>
+        Perfect food to pair with your coffee
+    </p>
+
+</div>
+
+
+<div class="products">
+
+    <!-- CROISSANT -->
+
+    <div
+        class="product-card"
+        data-name="butter croissant"
+        data-category="foods">
+
+        <img
+            src="images/croissant.jpg"
+            alt="Butter Croissant">
+
+        <div class="product-info">
+
+            <h3>Butter Croissant</h3>
+
+            <p>
+                Flaky and buttery French-style pastry.
+            </p>
+
+            <span class="price">
+                ₱90
+            </span>
+
+            <button
+                class="add-btn"
+                onclick="addOrder(
+                    'Butter Croissant',
+                    90,
+                    'images/croissant.jpg'
+                )">
+
+                + Add Order
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- CHOCOLATE CAKE -->
+
+    <div
+        class="product-card"
+        data-name="chocolate cake"
+        data-category="foods desserts">
+
+        <img
+            src="images/chocolate-cake.jpg"
+            alt="Chocolate Cake">
+
+        <div class="product-info">
+
+            <h3>Chocolate Cake</h3>
+
+            <p>
+                Rich and delicious chocolate dessert.
+            </p>
+
+            <span class="price">
+                ₱150
+            </span>
+
+            <button
+                class="add-btn"
+                onclick="addOrder(
+                    'Chocolate Cake',
+                    150,
+                    'images/chocolate-cake.jpg'
+                )">
+
+                + Add Order
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- CHEESECAKE -->
+
+    <div
+        class="product-card"
+        data-name="cheesecake"
+        data-category="foods desserts">
+
+        <img
+            src="images/cheesecake.jpg"
+            alt="Cheesecake">
+
+        <div class="product-info">
+
+            <h3>Cheesecake</h3>
+
+            <p>
+                Creamy cheesecake with a smooth texture.
+            </p>
+
+            <span class="price">
+                ₱140
+            </span>
+
+            <button
+                class="add-btn"
+                onclick="addOrder(
+                    'Cheesecake',
+                    140,
+                    'images/cheesecake.jpg'
+                )">
+
+                + Add Order
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- CLUB SANDWICH -->
+
+    <div
+        class="product-card"
+        data-name="club sandwich"
+        data-category="foods">
+
+        <img
+            src="images/club-sandwich.jpg"
+            alt="Club Sandwich">
+
+        <div class="product-info">
+
+            <h3>Club Sandwich</h3>
+
+            <p>
+                Classic sandwich with fresh ingredients.
+            </p>
+
+            <span class="price">
+                ₱160
+            </span>
+
+            <button
+                class="add-btn"
+                onclick="addOrder(
+                    'Club Sandwich',
+                    160,
+                    'images/club-sandwich.jpg'
+                )">
+
+                + Add Order
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     FLOATING ORDER BUTTON
+========================= -->
+
+<button
+    class="cart-floating"
+    onclick="openOrder()">
+
+    🛒
+
+    <span
+        class="cart-count"
+        id="cartCount">
+
+        0
+
+    </span>
+
+</button>
+
+
+<!-- =========================
+     ORDER OVERLAY
+========================= -->
+
+<div
+    class="cart-overlay"
+    id="cartOverlay"
+    onclick="closeOrder()">
+</div>
+
+
+<!-- =========================
+     ORDER PANEL
+========================= -->
+
+<div
+    class="cart-panel"
+    id="cartPanel">
+
+    <div class="cart-header">
+
+        <h2>
+            🛒 Your Order
+        </h2>
+
+        <button
+            class="close-cart"
+            onclick="closeOrder()">
+
+            &times;
+
+        </button>
+
+    </div>
+
+
+    <div id="cartItems"></div>
+
+
+    <!-- ORDER TOTAL -->
+
+    <div class="cart-total">
+
+        <span>
+            Total
+        </span>
+
+        <strong>
+            ₱<span id="cartTotal">0.00</span>
+        </strong>
+
+    </div>
+
+
+    <!-- PROMO -->
+
+    <div class="promo-section">
+
+        <h3>
+            🎟️ Promo Code
+        </h3>
+
+        <div class="promo-input">
+
+            <input
+                type="text"
+                id="promoCode"
+                placeholder="Enter promo code"
+            >
+
+            <button
+                onclick="applyPromo()">
+
+                Apply
+
+            </button>
+
+        </div>
+
+        <div id="promoDisplay"></div>
+
+        <div class="promo-hints">
+
+            <small>
+                Try:
+                <strong>BREW10</strong>,
+                <strong>COFFEE20</strong>,
+                or
+                <strong>STUDENT50</strong>
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="checkout-btn"
+        onclick="openCheckout()">
+
+        Proceed to Checkout
+
+    </button>
+
+</div>
+
+
+<!-- =========================
+     CHECKOUT MODAL
+========================= -->
+
+<div
+    class="modal"
+    id="checkoutModal">
+
+    <div class="modal-box">
+
+        <button
+            class="close-modal"
+            onclick="closeCheckout()">
+
+            &times;
+
+        </button>
+
+        <h2>
+            🧾 Checkout Order
+        </h2>
+
 
         <form onsubmit="placeOrder(event)">
 
-            <label>Customer Name</label>
-            <input
-                type="text"
-                id="customerName"
-                placeholder="Enter your name"
-                required
-            >
+            <div class="form-group">
 
-            <label>Contact Number</label>
-            <input
-                type="tel"
-                id="customerContact"
-                placeholder="09XXXXXXXXX"
-                required
-            >
+                <label>
+                    Customer Name
+                </label>
 
-            <label>Order Type</label>
-            <select id="orderType">
-                <option value="Dine-in">Dine-in</option>
-                <option value="Takeout">Takeout</option>
-            </select>
+                <input
+                    type="text"
+                    id="customerName"
+                    required
+                    placeholder="Enter your name"
+                >
 
-            <label>Payment Method</label>
-            <select id="paymentMethod">
-                <option value="Cash">Cash</option>
-                <option value="GCash">GCash</option>
-            </select>
-
-            <label>Special Request</label>
-            <textarea
-                id="specialRequest"
-                placeholder="Optional request..."
-            ></textarea>
-
-            <div class="checkout-summary">
-                <span>Total</span>
-                <strong>₱<span id="checkoutTotal">0</span></strong>
             </div>
 
-            <button type="submit" class="checkout-btn">
+
+            <div class="form-group">
+
+                <label>
+                    Contact Number
+                </label>
+
+                <input
+                    type="text"
+                    id="customerContact"
+                    required
+                    placeholder="09XXXXXXXXX"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Order Type
+                </label>
+
+                <select id="orderType">
+
+                    <option>Dine-in</option>
+                    <option>Takeout</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Payment Method
+                </label>
+
+                <select id="paymentMethod">
+
+                    <option>Cash</option>
+                    <option>GCash</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Special Request
+                </label>
+
+                <textarea
+                    id="specialRequest"
+                    placeholder="Any special request?"
+                ></textarea>
+
+            </div>
+
+
+            <h3 class="checkout-total">
+
+                Total:
+                ₱<span id="checkoutTotal">0.00</span>
+
+            </h3>
+
+
+            <button
+                class="place-order"
+                type="submit">
+
                 Place Order ☕
+
             </button>
 
         </form>
@@ -443,72 +874,1804 @@
 
 </div>
 
-<!-- ORDER STATUS MODAL -->
-<div class="modal" id="statusModal">
 
-    <div class="modal-content status-content">
+<!-- =========================
+     ORDER STATUS
+========================= -->
 
-        <button class="modal-close" onclick="closeStatus()">×</button>
+<div
+    class="modal"
+    id="statusModal">
 
-        <div class="success-icon">✓</div>
+    <div class="status-box">
 
-        <h2>Order Placed!</h2>
+        <button
+            class="close-modal"
+            onclick="closeStatus()">
 
-        <p>Your order number is:</p>
+            &times;
 
-        <div class="order-number" id="orderNumber">
-            BH-0000
+        </button>
+
+
+        <h2>
+            🎉 Order Placed!
+        </h2>
+
+
+        <div class="order-number">
+
+            Order Number:
+
+            <span id="orderNumber">
+                RB-0000
+            </span>
+
         </div>
+
+
+        <div
+            class="current-status"
+            id="currentStatus">
+
+            Order Received 📋
+
+        </div>
+
 
         <div class="status-tracker">
 
-            <div class="status-step active" id="status1">
-                <div class="status-circle">✓</div>
-                <span>Received</span>
+            <div
+                class="status-step active"
+                id="status1">
+
+                <div class="status-icon">
+                    📋
+                </div>
+
+                Received
+
             </div>
 
-            <div class="status-line"></div>
 
-            <div class="status-step" id="status2">
-                <div class="status-circle">2</div>
-                <span>Preparing</span>
+            <div
+                class="status-step"
+                id="status2">
+
+                <div class="status-icon">
+                    ☕
+                </div>
+
+                Preparing
+
             </div>
 
-            <div class="status-line"></div>
 
-            <div class="status-step" id="status3">
-                <div class="status-circle">3</div>
-                <span>Ready</span>
+            <div
+                class="status-step"
+                id="status3">
+
+                <div class="status-icon">
+                    🍰
+                </div>
+
+                Ready
+
             </div>
 
-            <div class="status-line"></div>
 
-            <div class="status-step" id="status4">
-                <div class="status-circle">4</div>
-                <span>Completed</span>
+            <div
+                class="status-step"
+                id="status4">
+
+                <div class="status-icon">
+                    🎉
+                </div>
+
+                Completed
+
             </div>
 
         </div>
 
-        <div class="current-status" id="currentStatus">
-            Order Received 📋
-        </div>
 
-        <button class="btn" onclick="closeStatus()">
-            Done
+        <button
+            class="receipt-button"
+            onclick="openReceipt()">
+
+            🧾 View Receipt
+
         </button>
 
     </div>
 
 </div>
 
+
+<!-- =========================
+     RECEIPT
+========================= -->
+
+<div
+    class="modal"
+    id="receiptModal">
+
+    <div class="receipt-box">
+
+        <button
+            class="close-modal"
+            onclick="closeReceipt()">
+
+            &times;
+
+        </button>
+
+
+        <div class="receipt-header">
+
+            <div class="receipt-logo">
+                ☕
+            </div>
+
+            <h2>
+                Rene's Brew
+            </h2>
+
+            <p>
+                Order Receipt
+            </p>
+
+        </div>
+
+
+        <div class="receipt-order">
+
+            <span>
+                Order Number
+            </span>
+
+            <strong id="receiptOrderNumber">
+                RB-0000
+            </strong>
+
+        </div>
+
+
+        <div class="receipt-customer">
+
+            <p>
+                <strong>Customer:</strong>
+                <span id="receiptCustomer"></span>
+            </p>
+
+            <p>
+                <strong>Contact:</strong>
+                <span id="receiptContact"></span>
+            </p>
+
+            <p>
+                <strong>Order Type:</strong>
+                <span id="receiptOrderType"></span>
+            </p>
+
+            <p>
+                <strong>Payment:</strong>
+                <span id="receiptPayment"></span>
+            </p>
+
+        </div>
+
+
+        <hr>
+
+
+        <h3>
+            Order Items
+        </h3>
+
+
+        <div id="receiptItems"></div>
+
+
+        <hr>
+
+
+        <div class="receipt-summary">
+
+            <div>
+
+                <span>
+                    Subtotal
+                </span>
+
+                <strong id="receiptSubtotal">
+                    ₱0.00
+                </strong>
+
+            </div>
+
+
+            <div class="receipt-promo">
+
+                <span>
+                    Promo Code
+                </span>
+
+                <strong id="receiptPromoCode">
+                    None
+                </strong>
+
+            </div>
+
+
+            <div class="receipt-discount">
+
+                <span>
+                    Promo Discount
+                </span>
+
+                <strong id="receiptDiscount">
+                    -₱0.00
+                </strong>
+
+            </div>
+
+
+            <div class="receipt-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="receiptTotal">
+                    ₱0.00
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="receipt-request">
+
+            <strong>
+                Special Request:
+            </strong>
+
+            <p id="receiptRequest">
+                None
+            </p>
+
+        </div>
+
+
+        <div class="receipt-footer">
+
+            <p>
+                Thank you for choosing Rene's Brew! ☕
+            </p>
+
+            <small>
+                Please keep this receipt for your order.
+            </small>
+
+        </div>
+
+
+        <button
+            class="print-btn"
+            onclick="printReceipt()">
+
+            🖨️ Print Receipt
+
+        </button>
+
+
+        <button
+            class="done-btn"
+            onclick="closeReceipt()">
+
+            Done
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-    <h3>☕ Brew Haven</h3>
-    <p>Good coffee. Good food. Good moments.</p>
-    <p>© 2026 Brew Haven. All Rights Reserved.</p>
+
+    <p>
+        © 2026 Rene's Brew Coffee Shop
+    </p>
+
+    <p>
+        Fresh Coffee • Good Food • Great Moments ☕
+    </p>
+
 </footer>
 
-<script src="./script.js"></script>
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+let orders = [];
+
+let currentCategory = "all";
+
+let statusTimer;
+
+let appliedPromo = null;
+
+let promoDiscount = 0;
+
+
+const promoCodes = {
+
+    BREW10: 0.10,
+
+    COFFEE20: 0.20,
+
+    STUDENT50: 50
+
+};
+
+
+// =========================
+// ADD ORDER
+// =========================
+
+function addOrder(name, price, image) {
+
+    const existingItem =
+        orders.find(
+            item => item.name === name
+        );
+
+
+    if (existingItem) {
+
+        existingItem.quantity++;
+
+    } else {
+
+        orders.push({
+
+            name: name,
+
+            price: price,
+
+            image: image,
+
+            quantity: 1
+
+        });
+
+    }
+
+
+    updateOrder();
+
+    openOrder();
+
+    animateOrder();
+
+
+    showNotification(
+        name + " added to your order! ☕"
+    );
+
+}
+
+
+// =========================
+// ORDER ANIMATION
+// =========================
+
+function animateOrder() {
+
+    const orderButton =
+        document.querySelector(
+            ".cart-floating"
+        );
+
+
+    if (!orderButton) return;
+
+
+    orderButton.classList.remove(
+        "bounce"
+    );
+
+
+    void orderButton.offsetWidth;
+
+
+    orderButton.classList.add(
+        "bounce"
+    );
+
+}
+
+
+// =========================
+// NOTIFICATION
+// =========================
+
+function showNotification(message) {
+
+    let notification =
+        document.getElementById(
+            "notification"
+        );
+
+
+    if (!notification) {
+
+        notification =
+            document.createElement("div");
+
+
+        notification.id =
+            "notification";
+
+
+        notification.style.position =
+            "fixed";
+
+
+        notification.style.top =
+            "90px";
+
+
+        notification.style.right =
+            "25px";
+
+
+        notification.style.background =
+            "#3e2723";
+
+
+        notification.style.color =
+            "white";
+
+
+        notification.style.padding =
+            "14px 20px";
+
+
+        notification.style.borderRadius =
+            "10px";
+
+
+        notification.style.zIndex =
+            "10000";
+
+
+        notification.style.boxShadow =
+            "0 8px 25px rgba(0,0,0,.2)";
+
+
+        notification.style.opacity =
+            "0";
+
+
+        notification.style.transform =
+            "translateY(-15px)";
+
+
+        notification.style.transition =
+            "0.3s";
+
+
+        document.body.appendChild(
+            notification
+        );
+
+    }
+
+
+    notification.textContent =
+        message;
+
+
+    notification.style.opacity =
+        "1";
+
+
+    notification.style.transform =
+        "translateY(0)";
+
+
+    clearTimeout(
+        notification.hideTimer
+    );
+
+
+    notification.hideTimer =
+        setTimeout(() => {
+
+            notification.style.opacity =
+                "0";
+
+
+            notification.style.transform =
+                "translateY(-15px)";
+
+        }, 2200);
+
+}
+
+
+// =========================
+// UPDATE ORDER
+// =========================
+
+function updateOrder() {
+
+    const orderItems =
+        document.getElementById(
+            "cartItems"
+        );
+
+
+    const orderCount =
+        document.getElementById(
+            "cartCount"
+        );
+
+
+    const orderTotal =
+        document.getElementById(
+            "cartTotal"
+        );
+
+
+    const checkoutTotal =
+        document.getElementById(
+            "checkoutTotal"
+        );
+
+
+    if (!orderItems) return;
+
+
+    orderItems.innerHTML = "";
+
+
+    let subtotal = 0;
+
+    let itemCount = 0;
+
+
+    // EMPTY ORDER
+
+    if (orders.length === 0) {
+
+        orderItems.innerHTML = `
+
+            <div style="
+                text-align:center;
+                padding:40px 10px;
+                animation:fadeUp .5s ease;
+            ">
+
+                <div style="font-size:45px;">
+                    🛒
+                </div>
+
+                <h3>
+                    Your order is empty
+                </h3>
+
+                <p style="color:#795548;">
+                    Add something delicious
+                    from our menu.
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+    else {
+
+        orders.forEach(
+            (item, index) => {
+
+                const itemTotal =
+                    item.price *
+                    item.quantity;
+
+
+                subtotal += itemTotal;
+
+
+                itemCount +=
+                    item.quantity;
+
+
+                orderItems.innerHTML += `
+
+                    <div class="cart-item">
+
+                        <img
+                            src="${item.image}"
+                            alt="${item.name}"
+                        >
+
+                        <div class="cart-item-info">
+
+                            <h3>
+                                ${item.name}
+                            </h3>
+
+                            <p>
+                                ₱${item.price}
+                            </p>
+
+
+                            <div class="cart-controls">
+
+                                <button
+                                    onclick="
+                                    changeOrderQuantity(
+                                        ${index},
+                                        -1
+                                    )">
+
+                                    −
+
+                                </button>
+
+
+                                <span>
+                                    ${item.quantity}
+                                </span>
+
+
+                                <button
+                                    onclick="
+                                    changeOrderQuantity(
+                                        ${index},
+                                        1
+                                    )">
+
+                                    +
+
+                                </button>
+
+
+                                <button
+                                    class="remove-btn"
+                                    onclick="
+                                    removeOrder(
+                                        ${index}
+                                    )">
+
+                                    🗑
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <strong>
+                            ₱${itemTotal.toFixed(2)}
+                        </strong>
+
+                    </div>
+
+                `;
+
+            }
+        );
+
+    }
+
+
+    const discount =
+        calculateDiscount(
+            subtotal
+        );
+
+
+    const finalTotal =
+        subtotal - discount;
+
+
+    orderCount.textContent =
+        itemCount;
+
+
+    orderTotal.textContent =
+        finalTotal.toFixed(2);
+
+
+    checkoutTotal.textContent =
+        finalTotal.toFixed(2);
+
+
+    updatePromoDisplay(
+        discount
+    );
+
+}
+
+
+// =========================
+// CALCULATE DISCOUNT
+// =========================
+
+function calculateDiscount(subtotal) {
+
+    if (!appliedPromo) {
+
+        promoDiscount = 0;
+
+        return 0;
+
+    }
+
+
+    if (appliedPromo === "BREW10") {
+
+        promoDiscount =
+            subtotal * 0.10;
+
+    }
+
+    else if (
+        appliedPromo === "COFFEE20"
+    ) {
+
+        promoDiscount =
+            subtotal * 0.20;
+
+    }
+
+    else if (
+        appliedPromo === "STUDENT50"
+    ) {
+
+        promoDiscount =
+            Math.min(
+                50,
+                subtotal
+            );
+
+    }
+
+
+    return promoDiscount;
+
+}
+
+
+// =========================
+// PROMO DISPLAY
+// =========================
+
+function updatePromoDisplay(discount) {
+
+    const promoDisplay =
+        document.getElementById(
+            "promoDisplay"
+        );
+
+
+    if (!promoDisplay) return;
+
+
+    if (appliedPromo) {
+
+        promoDisplay.innerHTML = `
+
+            <div class="promo-applied">
+
+                <span>
+                    🎟️ ${appliedPromo}
+                    applied
+                </span>
+
+                <strong>
+                    -₱${discount.toFixed(2)}
+                </strong>
+
+                <button
+                    onclick="removePromo()">
+
+                    Remove
+
+                </button>
+
+            </div>
+
+        `;
+
+    }
+
+    else {
+
+        promoDisplay.innerHTML = "";
+
+    }
+
+}
+
+
+// =========================
+// APPLY PROMO
+// =========================
+
+function applyPromo() {
+
+    const input =
+        document.getElementById(
+            "promoCode"
+        );
+
+
+    const code =
+        input.value
+            .trim()
+            .toUpperCase();
+
+
+    if (code === "") {
+
+        showNotification(
+            "Please enter a promo code."
+        );
+
+        return;
+
+    }
+
+
+    if (
+        promoCodes[code] === undefined
+    ) {
+
+        showNotification(
+            "❌ Invalid promo code."
+        );
+
+        return;
+
+    }
+
+
+    appliedPromo = code;
+
+
+    input.value = "";
+
+
+    updateOrder();
+
+
+    showNotification(
+        "🎟️ " +
+        code +
+        " applied successfully!"
+    );
+
+}
+
+
+// =========================
+// REMOVE PROMO
+// =========================
+
+function removePromo() {
+
+    appliedPromo = null;
+
+    promoDiscount = 0;
+
+
+    updateOrder();
+
+
+    showNotification(
+        "Promo code removed."
+    );
+
+}
+
+
+// =========================
+// CHANGE ORDER QUANTITY
+// =========================
+
+function changeOrderQuantity(
+    index,
+    amount
+) {
+
+    if (!orders[index]) return;
+
+
+    orders[index].quantity +=
+        amount;
+
+
+    if (
+        orders[index].quantity <= 0
+    ) {
+
+        orders.splice(index, 1);
+
+    }
+
+
+    updateOrder();
+
+}
+
+
+// =========================
+// REMOVE ORDER
+// =========================
+
+function removeOrder(index) {
+
+    if (!orders[index]) return;
+
+
+    const itemName =
+        orders[index].name;
+
+
+    orders.splice(index, 1);
+
+
+    updateOrder();
+
+
+    showNotification(
+        itemName +
+        " removed from your order."
+    );
+
+}
+
+
+// =========================
+// OPEN ORDER
+// =========================
+
+function openOrder() {
+
+    document
+        .getElementById(
+            "cartPanel"
+        )
+        .classList.add("open");
+
+
+    document
+        .getElementById(
+            "cartOverlay"
+        )
+        .classList.add("show");
+
+}
+
+
+// =========================
+// CLOSE ORDER
+// =========================
+
+function closeOrder() {
+
+    document
+        .getElementById(
+            "cartPanel"
+        )
+        .classList.remove("open");
+
+
+    document
+        .getElementById(
+            "cartOverlay"
+        )
+        .classList.remove("show");
+
+}
+
+
+// =========================
+// CHECKOUT
+// =========================
+
+function openCheckout() {
+
+    if (orders.length === 0) {
+
+        showNotification(
+            "Your order is empty."
+        );
+
+        return;
+
+    }
+
+
+    updateOrder();
+
+
+    document
+        .getElementById(
+            "checkoutModal"
+        )
+        .classList.add("show");
+
+}
+
+
+function closeCheckout() {
+
+    document
+        .getElementById(
+            "checkoutModal"
+        )
+        .classList.remove("show");
+
+}
+
+
+// =========================
+// PLACE ORDER
+// =========================
+
+function placeOrder(event) {
+
+    event.preventDefault();
+
+
+    if (orders.length === 0) {
+
+        showNotification(
+            "Your order is empty."
+        );
+
+        return;
+
+    }
+
+
+    const customerName =
+        document
+            .getElementById(
+                "customerName"
+            )
+            .value
+            .trim();
+
+
+    const customerContact =
+        document
+            .getElementById(
+                "customerContact"
+            )
+            .value
+            .trim();
+
+
+    const orderType =
+        document
+            .getElementById(
+                "orderType"
+            )
+            .value;
+
+
+    const paymentMethod =
+        document
+            .getElementById(
+                "paymentMethod"
+            )
+            .value;
+
+
+    const specialRequest =
+        document
+            .getElementById(
+                "specialRequest"
+            )
+            .value
+            .trim();
+
+
+    const orderNumber =
+        "RB-" +
+        Math.floor(
+            1000 +
+            Math.random() *
+            9000
+        );
+
+
+    const subtotal =
+        orders.reduce(
+            (total, item) =>
+                total +
+                item.price *
+                item.quantity,
+            0
+        );
+
+
+    const discount =
+        calculateDiscount(
+            subtotal
+        );
+
+
+    const finalTotal =
+        subtotal -
+        discount;
+
+
+    const promoUsed =
+        appliedPromo;
+
+
+    document
+        .getElementById(
+            "orderNumber"
+        )
+        .textContent =
+        orderNumber;
+
+
+    generateReceipt(
+
+        orderNumber,
+
+        customerName,
+
+        customerContact,
+
+        orderType,
+
+        paymentMethod,
+
+        specialRequest,
+
+        subtotal,
+
+        discount,
+
+        finalTotal,
+
+        promoUsed
+
+    );
+
+
+    closeCheckout();
+
+    closeOrder();
+
+
+    resetOrderStatus();
+
+
+    document
+        .getElementById(
+            "statusModal"
+        )
+        .classList.add("show");
+
+
+    startOrderStatus();
+
+
+    // Clear current order
+
+    orders = [];
+
+    appliedPromo = null;
+
+    promoDiscount = 0;
+
+
+    updateOrder();
+
+
+    showNotification(
+        "🎉 Order placed successfully!"
+    );
+
+}
+
+
+// =========================
+// GENERATE RECEIPT
+// =========================
+
+function generateReceipt(
+
+    orderNumber,
+
+    customerName,
+
+    customerContact,
+
+    orderType,
+
+    paymentMethod,
+
+    specialRequest,
+
+    subtotal,
+
+    discount,
+
+    finalTotal,
+
+    promoCode
+
+) {
+
+    const receiptItems =
+        document.getElementById(
+            "receiptItems"
+        );
+
+
+    receiptItems.innerHTML = "";
+
+
+    orders.forEach(item => {
+
+        const itemTotal =
+            item.price *
+            item.quantity;
+
+
+        receiptItems.innerHTML += `
+
+            <div class="receipt-item">
+
+                <span>
+                    ${item.name}
+                    × ${item.quantity}
+                </span>
+
+                <strong>
+                    ₱${itemTotal.toFixed(2)}
+                </strong>
+
+            </div>
+
+        `;
+
+    });
+
+
+    document.getElementById(
+        "receiptOrderNumber"
+    ).textContent =
+        orderNumber;
+
+
+    document.getElementById(
+        "receiptCustomer"
+    ).textContent =
+        customerName;
+
+
+    document.getElementById(
+        "receiptContact"
+    ).textContent =
+        customerContact;
+
+
+    document.getElementById(
+        "receiptOrderType"
+    ).textContent =
+        orderType;
+
+
+    document.getElementById(
+        "receiptPayment"
+    ).textContent =
+        paymentMethod;
+
+
+    document.getElementById(
+        "receiptSubtotal"
+    ).textContent =
+        "₱" +
+        subtotal.toFixed(2);
+
+
+    const receiptPromoCode =
+        document.getElementById(
+            "receiptPromoCode"
+        );
+
+
+    if (receiptPromoCode) {
+
+        receiptPromoCode.textContent =
+            promoCode ||
+            "None";
+
+    }
+
+
+    document.getElementById(
+        "receiptDiscount"
+    ).textContent =
+        "-₱" +
+        discount.toFixed(2);
+
+
+    document.getElementById(
+        "receiptTotal"
+    ).textContent =
+        "₱" +
+        finalTotal.toFixed(2);
+
+
+    document.getElementById(
+        "receiptRequest"
+    ).textContent =
+        specialRequest ||
+        "None";
+
+}
+
+
+// =========================
+// RECEIPT
+// =========================
+
+function openReceipt() {
+
+    document
+        .getElementById(
+            "receiptModal"
+        )
+        .classList.add("show");
+
+}
+
+
+function closeReceipt() {
+
+    document
+        .getElementById(
+            "receiptModal"
+        )
+        .classList.remove("show");
+
+}
+
+
+function printReceipt() {
+
+    window.print();
+
+}
+
+
+// =========================
+// ORDER STATUS
+// =========================
+
+function resetOrderStatus() {
+
+    clearInterval(
+        statusTimer
+    );
+
+
+    for (
+        let i = 1;
+        i <= 4;
+        i++
+    ) {
+
+        const step =
+            document.getElementById(
+                "status" + i
+            );
+
+
+        if (step) {
+
+            step.classList.remove(
+                "active"
+            );
+
+
+            step.classList.remove(
+                "completed"
+            );
+
+        }
+
+    }
+
+
+    document
+        .getElementById(
+            "status1"
+        )
+        .classList.add(
+            "active"
+        );
+
+
+    document
+        .getElementById(
+            "currentStatus"
+        )
+        .textContent =
+        "Order Received 📋";
+
+}
+
+
+// =========================
+// START ORDER STATUS
+// =========================
+
+function startOrderStatus() {
+
+    let currentStep = 1;
+
+
+    statusTimer =
+        setInterval(() => {
+
+            currentStep++;
+
+
+            if (
+                currentStep === 2
+            ) {
+
+                activateStatus(
+                    2,
+                    "Preparing Your Order ☕"
+                );
+
+            }
+
+
+            if (
+                currentStep === 3
+            ) {
+
+                activateStatus(
+                    3,
+                    "Your Order Is Ready! 🍰"
+                );
+
+            }
+
+
+            if (
+                currentStep === 4
+            ) {
+
+                activateStatus(
+                    4,
+                    "Order Completed! 🎉"
+                );
+
+
+                clearInterval(
+                    statusTimer
+                );
+
+            }
+
+        }, 4000);
+
+}
+
+
+// =========================
+// ACTIVATE STATUS
+// =========================
+
+function activateStatus(
+    stepNumber,
+    message
+) {
+
+    for (
+        let i = 1;
+        i <= stepNumber;
+        i++
+    ) {
+
+        const step =
+            document.getElementById(
+                "status" + i
+            );
+
+
+        if (!step) continue;
+
+
+        step.classList.add(
+            "active"
+        );
+
+
+        if (
+            i < stepNumber
+        ) {
+
+            step.classList.add(
+                "completed"
+            );
+
+        }
+
+    }
+
+
+    document
+        .getElementById(
+            "currentStatus"
+        )
+        .textContent =
+        message;
+
+}
+
+
+// =========================
+// CLOSE STATUS
+// =========================
+
+function closeStatus() {
+
+    document
+        .getElementById(
+            "statusModal"
+        )
+        .classList.remove(
+            "show"
+        );
+
+
+    clearInterval(
+        statusTimer
+    );
+
+}
+
+
+// =========================
+// SEARCH
+// =========================
+
+function searchProducts() {
+
+    const input =
+        document.getElementById(
+            "searchInput"
+        );
+
+
+    if (!input) return;
+
+
+    const searchText =
+        input.value
+            .toLowerCase()
+            .trim();
+
+
+    document
+        .querySelectorAll(
+            ".product-card"
+        )
+        .forEach(product => {
+
+            const name =
+                product.dataset.name
+                    .toLowerCase();
+
+
+            const categories =
+                product.dataset.category
+                    .toLowerCase();
+
+
+            const matchesSearch =
+                name.includes(
+                    searchText
+                );
+
+
+            const matchesCategory =
+                currentCategory === "all" ||
+                categories.includes(
+                    currentCategory
+                );
+
+
+            if (
+                matchesSearch &&
+                matchesCategory
+            ) {
+
+                product.style.display =
+                    "";
+
+
+                product.style.animation =
+                    "fadeUp .5s ease";
+
+            }
+
+            else {
+
+                product.style.display =
+                    "none";
+
+            }
+
+        });
+
+}
+
+
+// =========================
+// FILTER CATEGORY
+// =========================
+
+function filterCategory(
+    category,
+    button
+) {
+
+    currentCategory =
+        category;
+
+
+    document
+        .querySelectorAll(
+            ".category-btn"
+        )
+        .forEach(btn => {
+
+            btn.classList.remove(
+                "active"
+            );
+
+        });
+
+
+    button.classList.add(
+        "active"
+    );
+
+
+    searchProducts();
+
+}
+
+
+// =========================
+// MODAL CLICK OUTSIDE
+// =========================
+
+window.addEventListener(
+    "click",
+    function(event) {
+
+        const checkout =
+            document.getElementById(
+                "checkoutModal"
+            );
+
+
+        const status =
+            document.getElementById(
+                "statusModal"
+            );
+
+
+        const receipt =
+            document.getElementById(
+                "receiptModal"
+            );
+
+
+        if (
+            event.target === checkout
+        ) {
+
+            closeCheckout();
+
+        }
+
+
+        if (
+            event.target === status
+        ) {
+
+            closeStatus();
+
+        }
+
+
+        if (
+            event.target === receipt
+        ) {
+
+            closeReceipt();
+
+        }
+
+    }
+);
+
+
+// =========================
+// ESCAPE KEY
+// =========================
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            closeOrder();
+
+            closeCheckout();
+
+            closeStatus();
+
+            closeReceipt();
+
+        }
+
+    }
+);
+
+
+// =========================
+// PAGE LOAD
+// =========================
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        updateOrder();
+
+    }
+);
+
+</script>
 
 </body>
 </html>
