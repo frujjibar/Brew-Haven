@@ -3,14 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brew Haven | About</title>
+
+    <title>About Us | Rene's Brew</title>
+
     <link rel="stylesheet" href="./style.css">
+
+    <style>
+        /* =========================
+           TEAM SECTION
+        ========================= */
+
+        .team-section {
+            padding: 80px 8%;
+            background: #f7f1eb;
+            text-align: center;
+        }
+
+        .team-section h2 {
+            color: #3e2723;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .team-section > p {
+            color: #795548;
+            margin-bottom: 45px;
+            font-size: 17px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 25px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .team-card {
+            background: white;
+            padding: 25px 18px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(62, 39, 35, 0.12);
+            transition: 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(62, 39, 35, 0.2);
+        }
+
+        .team-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #d7b899;
+            margin-bottom: 18px;
+            transition: 0.3s ease;
+        }
+
+        .team-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .team-card h3 {
+            color: #3e2723;
+            margin: 5px 0;
+            font-size: 20px;
+        }
+
+        .team-card .role {
+            color: #a67c52;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .team-card p {
+            color: #795548;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           OUR VALUES - FIXED
+        ========================= */
+
+        .values-section {
+            padding: 80px 8%;
+            background: #fffaf5;
+            text-align: center;
+        }
+
+        .values-section h2 {
+            color: #3e2723;
+            font-size: 36px;
+            margin-bottom: 45px;
+        }
+
+        .values-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .value-card {
+            background: #ffffff;
+            padding: 35px 25px;
+            border-radius: 20px;
+
+            box-shadow: 0 8px 25px rgba(62, 39, 35, 0.12);
+
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(62, 39, 35, 0.18);
+        }
+
+        .value-icon {
+            width: 75px;
+            height: 75px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #f1dfce;
+            border-radius: 50%;
+
+            font-size: 35px;
+        }
+
+        .value-card h3 {
+            color: #3e2723;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .value-card p {
+            color: #795548;
+            font-size: 15px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+
+            padding: 60px 8%;
+
+            background: #3e2723;
+            text-align: center;
+        }
+
+        .stat h2 {
+            color: #ffffff;
+            font-size: 35px;
+            margin-bottom: 8px;
+        }
+
+        .stat p {
+            color: #d7b899;
+            margin: 0;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .team-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-card img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+
+        @media (max-width: 450px) {
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
-    <div class="logo">☕ Brew Haven</div>
+
+    <div class="logo">
+        ☕ Rene's Brew
+    </div>
 
     <nav>
         <a href="./index.html">Home</a>
@@ -18,98 +253,361 @@
         <a href="./about.html" class="active">About</a>
         <a href="./contact.html">Contact</a>
     </nav>
+
 </header>
 
+
+<!-- =========================
+     PAGE HERO
+========================= -->
+
 <section class="page-hero">
+
     <div>
-        <span>OUR STORY</span>
-        <h1>About Brew Haven</h1>
-        <p>A small café with a big love for coffee.</p>
+
+        <h1>About Rene's Brew</h1>
+
+        <p>
+            A place where coffee, food, and good company come together.
+        </p>
+
     </div>
+
 </section>
+
+
+<!-- =========================
+     OUR STORY
+========================= -->
 
 <section class="about-section">
 
     <div class="about-image">
-        <img src="./images/cappuccino.jpg" alt="Brew Haven Coffee">
+
+        <img
+            src="./images/cappuccino.jpg"
+            alt="Rene's Brew Coffee"
+        >
+
     </div>
+
 
     <div class="about-text">
-        <span>WHO WE ARE</span>
 
-        <h2>More Than Just Coffee</h2>
+        <h2>Our Story</h2>
 
         <p>
-            Brew Haven is a cozy coffee shop created for people who love
-            great coffee, delicious food, and comfortable spaces.
+            Rene's Brew is a student-created coffee shop website designed
+            to provide customers with a simple and enjoyable way to explore
+            coffee, food, and other delicious treats.
         </p>
 
         <p>
-            We believe that a simple cup of coffee can create a good moment.
-            Whether you are studying, working, meeting friends, or simply
-            relaxing, Brew Haven is here for you.
+            Our goal is to create a cozy digital coffee shop experience
+            where customers can browse the menu, add products to their cart,
+            place an order, and track its status.
         </p>
 
-        <a href="./menu.html" class="btn">Explore Our Menu</a>
+        <p>
+            This website was created as a group project to demonstrate
+            our knowledge of HTML, CSS, and JavaScript.
+        </p>
+
     </div>
 
 </section>
 
-<section class="section">
 
-    <div class="section-title">
-        <span>OUR VALUES</span>
-        <h2>What We Believe In</h2>
-    </div>
+<!-- =========================
+     OUR VALUES
+========================= -->
 
-    <div class="feature-grid">
+<section class="values-section">
 
-        <div class="feature-card">
-            <div class="feature-icon">⭐</div>
-            <h3>Quality</h3>
-            <p>We focus on serving quality drinks and food to our customers.</p>
+    <h2>Our Values</h2>
+
+
+    <div class="values-grid">
+
+
+        <!-- QUALITY -->
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                ☕
+            </div>
+
+            <h3>
+                Quality
+            </h3>
+
+            <p>
+                We value good coffee, delicious food,
+                and a quality experience for every customer.
+            </p>
+
         </div>
 
-        <div class="feature-card">
-            <div class="feature-icon">❤️</div>
-            <h3>Comfort</h3>
-            <p>We want every customer to feel welcome and comfortable.</p>
+
+        <!-- COMFORT -->
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                🏠
+            </div>
+
+            <h3>
+                Comfort
+            </h3>
+
+            <p>
+                Rene's Brew is designed to feel warm,
+                welcoming, and comfortable.
+            </p>
+
         </div>
 
-        <div class="feature-card">
-            <div class="feature-icon">🤝</div>
-            <h3>Community</h3>
-            <p>We want Brew Haven to be a place where people connect.</p>
+
+        <!-- COMMUNITY -->
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                🤝
+            </div>
+
+            <h3>
+                Community
+            </h3>
+
+            <p>
+                We believe coffee is better when shared
+                with friends and people around us.
+            </p>
+
         </div>
+
 
     </div>
 
 </section>
+
+
+<!-- =========================
+     MEET OUR TEAM
+========================= -->
+
+<section class="team-section">
+
+    <h2>
+        Meet Our Team
+    </h2>
+
+    <p>
+        The five members behind the Rene's Brew project.
+    </p>
+
+
+    <div class="team-grid">
+
+
+        <!-- MEMBER 1 -->
+
+        <div class="team-card">
+
+            <img
+                src="./images/team/member1.jpg"
+                alt="Team Member 1"
+            >
+
+            <h3>
+                Oliver Penaranda
+            </h3>
+
+            <div class="role">
+                Project Leader
+            </div>
+
+            <p>
+                Helped organize the project and coordinate
+                the development of Rene's Brew.
+            </p>
+
+        </div>
+
+
+        <!-- MEMBER 2 -->
+
+        <div class="team-card">
+
+            <img
+                src="./images/team/member2.jpg"
+                alt="Team Member 2"
+            >
+
+            <h3>
+                Grant David Plete
+            </h3>
+
+            <div class="role">
+                Web Developer
+            </div>
+
+            <p>
+                Worked on the website structure and
+                JavaScript functionality.
+            </p>
+
+        </div>
+
+
+        <!-- MEMBER 3 -->
+
+        <div class="team-card">
+
+            <img
+                src="./images/team/member3.jpg"
+                alt="Team Member 3"
+            >
+
+            <h3>
+                Jan Dean Sereno
+            </h3>
+
+            <div class="role">
+                UI Designer
+            </div>
+
+            <p>
+                Helped create the visual design, layout,
+                and overall appearance of the website.
+            </p>
+
+        </div>
+
+
+        <!-- MEMBER 4 -->
+
+        <div class="team-card">
+
+            <img
+                src="./images/team/member4.jpg"
+                alt="Team Member 4"
+            >
+
+            <h3>
+                Jhon Lloyd Doromal
+            </h3>
+
+            <div class="role">
+                Content Manager
+            </div>
+
+            <p>
+                Helped prepare the website content,
+                menu information, and descriptions.
+            </p>
+
+        </div>
+
+
+        <!-- MEMBER 5 -->
+
+        <div class="team-card">
+
+            <img
+                src="./images/team/member5.jpg"
+                alt="Team Member 5"
+            >
+
+            <h3>
+                James Pablico
+            </h3>
+
+            <div class="role">
+                Documentation
+            </div>
+
+            <p>
+                Helped with documentation, presentation,
+                and project organization.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     STATS
+========================= -->
 
 <section class="stats-section">
 
     <div class="stat">
+
+        <h2>5</h2>
+
+        <p>
+            Team Members
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
         <h2>8+</h2>
-        <p>Menu Items</p>
+
+        <p>
+            Menu Items
+        </p>
+
     </div>
 
+
     <div class="stat">
+
         <h2>100%</h2>
-        <p>Made With Care</p>
+
+        <p>
+            Made With Care
+        </p>
+
     </div>
 
+
     <div class="stat">
+
         <h2>5★</h2>
-        <p>Customer Experience</p>
+
+        <p>
+            Customer Experience
+        </p>
+
     </div>
 
 </section>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-    <h3>☕ Brew Haven</h3>
-    <p>Good coffee. Good food. Good moments.</p>
-    <p>© 2026 Brew Haven. All Rights Reserved.</p>
+
+    <p>
+        © 2026 Rene's Brew. All Rights Reserved.
+    </p>
+
 </footer>
+
 
 </body>
 </html>
+```
